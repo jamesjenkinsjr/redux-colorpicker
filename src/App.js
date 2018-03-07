@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
        <h1>I DO see color</h1>
-       <div className="color-grid" style={{backgroundColor: this.props.hex}}>Box is me</div>
+       <div className="color-grid" style={{backgroundColor: this.props.hex}}>You have found me - te heh heh</div>
        <input type="color" onChange={(e) => this.props.changeHex(e.target.value)}/>
       </div>
     );
