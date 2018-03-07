@@ -19,7 +19,7 @@ class App extends Component {
 const updateColor = (hex) => ({
   type: COLORPICK,
   payload: {
-    hex: hex
+    value: hex
   }
 });
 //reducer
@@ -31,7 +31,7 @@ export const colorChange = (state = initialState, action) => {
     case COLORPICK:
       return {
         ...state,
-        hex: action.payload.hex
+        hex: action.payload.value
       }
       default:
       return { 
