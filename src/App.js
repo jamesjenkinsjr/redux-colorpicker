@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
+import { updateColor } from './color/actions'
 
 class App extends Component {
   
@@ -15,35 +16,6 @@ class App extends Component {
   }
 }
 
-//actions
-const updateColor = (hex) => ({
-  type: COLORPICK,
-  payload: {
-    value: hex
-  }
-});
-//reducer
-const initialState = {
-  hex: "#000000"
-};
-export const colorChange = (state = initialState, action) => {
-  switch (action.type) {
-    case COLORPICK:
-      return {
-        ...state,
-        hex: action.payload.value
-      }
-      default:
-      return { 
-        ...state, 
-        hex: state.hex
-      }
-
-  }
-};
-
-//types
-const COLORPICK = 'COLORPICK';
 //dispatch
 const mapStateToProps = (state) => {
   return {
